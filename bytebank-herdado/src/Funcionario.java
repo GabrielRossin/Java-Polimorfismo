@@ -1,33 +1,36 @@
+//nao pode instanciar essa classe, pq é abstrata
 
-public class Funcionario 
-{
+public abstract class Funcionario {
 	private String nome;
 	private String cpf;
     private double salario;
     
     
     
-    public double getBonificacao() {
-        return this.salario * 0.05;
-    }
-    
-    public String getNome() {
+    public abstract double getBonificacao();
+   
+    public String getNome() 
+    {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(String nome) 
+    {
         this.nome = nome;
     }
 
-    public String getCpf() {
+    public String getCpf() 
+    {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
+    public void setCpf(String cpf) 
+    {
         this.cpf = cpf;
     }
 
-    public double getSalario() {
+    public double getSalario() 
+    {
     	return salario;
         
     }

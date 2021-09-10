@@ -22,9 +22,10 @@ public class Gerente extends Funcionario
         }
     }
     
-    public double getBonificacao() {
-    	
-        return super.getBonificacao() + super.getSalario(); //super diz que a variável está na classe super 
+    public double getBonificacao() 
+    {
+    	System.out.println("Gerente");
+        return super.getSalario(); //super diz que a variável está na classe super 
     }
 
 	
