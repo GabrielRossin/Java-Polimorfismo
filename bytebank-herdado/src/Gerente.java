@@ -2,7 +2,12 @@
 public class Gerente extends Funcionario implements Autenticavel
 {
  
-	private int senha;
+	private AutenticacaoUtil autentica;
+
+    
+    public Gerente() {
+		this.autentica = new AutenticacaoUtil();
+	}
 	
     public double getBonificacao() 
     {
@@ -10,24 +15,20 @@ public class Gerente extends Funcionario implements Autenticavel
         return super.getSalario(); //super diz que a variável está na classe super 
     }
 
-	@Override
-	public void setSenha(int senha) 
-	{
-		this.senha = senha;
+    @Override
+	public void setSenha(int senha) {
+		
+		this.autentica.setSenha(senha);
 		
 	}
 
 	@Override
-	public boolean autentica(int senha) 
-	{
-		 if(this.senha == senha) 
-		 {
-             return true;
-         } 
-		 else 
-		 {
-             return false;
-         }
+	public boolean autentica(int senha) {
+		   if(this.autentica.autentica(senha)) {
+               return true;
+           } else {
+               return false;
+           }
 	}
 
 	
